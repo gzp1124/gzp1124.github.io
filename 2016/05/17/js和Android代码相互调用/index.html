@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="吐槽," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -57,22 +57,16 @@
 
 
 
-<meta name="description" content="为什么开源中国的登录功能，手机号，密码都没有做任何处理，直接明文传输，不用考虑什么安全问题么？
-在开源中国的基础上写的代码，前期没做检查，按开源的接口写的，这都没注意，写了这么多功能才发现，只能回头改这登录模块。
-额，使用开源也得多检查。。。">
+<meta name="description" content="先上完整代码：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="吐槽">
-<meta property="og:url" content="http://yoursite.com/2016/04/01/吐槽/index.html">
+<meta property="og:title" content="js和Android代码相互调用">
+<meta property="og:url" content="http://yoursite.com/2016/05/17/js和Android代码相互调用/index.html">
 <meta property="og:site_name" content="gzp1124">
-<meta property="og:description" content="为什么开源中国的登录功能，手机号，密码都没有做任何处理，直接明文传输，不用考虑什么安全问题么？
-在开源中国的基础上写的代码，前期没做检查，按开源的接口写的，这都没注意，写了这么多功能才发现，只能回头改这登录模块。
-额，使用开源也得多检查。。。">
-<meta property="og:updated_time" content="2016-04-01T03:04:28.954Z">
+<meta property="og:description" content="先上完整代码：">
+<meta property="og:updated_time" content="2016-05-17T02:58:40.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="吐槽">
-<meta name="twitter:description" content="为什么开源中国的登录功能，手机号，密码都没有做任何处理，直接明文传输，不用考虑什么安全问题么？
-在开源中国的基础上写的代码，前期没做检查，按开源的接口写的，这都没注意，写了这么多功能才发现，只能回头改这登录模块。
-额，使用开源也得多检查。。。">
+<meta name="twitter:title" content="js和Android代码相互调用">
+<meta name="twitter:description" content="先上完整代码：">
 
 
 
@@ -90,7 +84,7 @@
   };
 </script>
 
-  <title> 吐槽 | gzp1124 </title>
+  <title> js和Android代码相互调用 | gzp1124 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -230,7 +224,7 @@
             
             
               
-                吐槽
+                js和Android代码相互调用
               
             
           </h1>
@@ -242,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T10:56:48+08:00" content="2016-04-01">
-              2016-04-01
+            <time itemprop="dateCreated" datetime="2016-05-17T10:58:40+08:00" content="2016-05-17">
+              2016-05-17
             </time>
           </span>
 
@@ -256,8 +250,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/休闲/" itemprop="url" rel="index">
-                    <span itemprop="name">休闲</span>
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
                   </a>
                 </span>
 
@@ -272,8 +266,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/01/吐槽/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/吐槽/" itemprop="commentsCount"></span>
+                <a href="/2016/05/17/js和Android代码相互调用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/17/js和Android代码相互调用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -295,9 +289,15 @@
       
 
       
-        <p>为什么开源中国的登录功能，手机号，密码都没有做任何处理，直接明文传输，不用考虑什么安全问题么？</p>
-<p>在开源中国的基础上写的代码，前期没做检查，按开源的接口写的，这都没注意，写了这么多功能才发现，只能回头改这登录模块。</p>
-<p>额，使用开源也得多检查。。。</p>
+        <p>先上完整代码：<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    private WebView web;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        String s = &quot;&lt;html&gt;&lt;head&gt;test&lt;/head&gt;&lt;body&gt;&lt;a href=\&quot;#\&quot; onclick=\&quot;jsCallAndroid()\&quot;&gt;这是一个连接&lt;/a&gt;&quot; +</span><br><span class="line">                &quot;&lt;script&gt;&quot; +</span><br><span class="line">            &quot;function jsCallAndroid() &#123;&quot; +</span><br><span class="line">                &quot;//这里使用js的window对象，通过addJavascriptInterface绑定Java对象时传递进来的jsObj对象调用me方法&quot; +</span><br><span class="line">                &quot;window.jsObj.me();&quot; +</span><br><span class="line">                &quot;&#125;&quot; +</span><br><span class="line">            &quot;function androidCallJs()&#123;&quot; +</span><br><span class="line">                &quot;//Android调用该代码直接弹个alert&quot; +</span><br><span class="line">                &quot;alert(2);&quot; +</span><br><span class="line">                &quot;&#125;&quot; +</span><br><span class="line">                &quot;&lt;/script&gt;&quot;+</span><br><span class="line">                &quot;&lt;/body&gt;&lt;/html&gt;&quot;;</span><br><span class="line"></span><br><span class="line">        web = (WebView) findViewById(R.id.web);</span><br><span class="line">        web.setWebChromeClient(new WebChromeClient() &#123;</span><br><span class="line">        &#125;);</span><br><span class="line">        WebSettings webSettings = web.getSettings();</span><br><span class="line">        webSettings.setJavaScriptEnabled(true);</span><br><span class="line">        webSettings.setDefaultTextEncodingName(&quot;utf-8&quot;);</span><br><span class="line"></span><br><span class="line">        web.loadDataWithBaseURL(&quot;&quot;, s, &quot;text/html&quot;, &quot;UTF-8&quot;, &quot;&quot;);</span><br><span class="line">        //绑定Java对象到js中，参数一要绑定进去的Java对象，参数二该对象的别名(用于js中调用)，如jsObj.me()就调用了</span><br><span class="line">        web.addJavascriptInterface(new MyJs(), &quot;jsObj&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void show(View view)&#123;</span><br><span class="line">        web.loadUrl(&quot;javascript:jsM()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class MyJs &#123;</span><br><span class="line">         //这里必须要使用这个注解</span><br><span class="line">        @JavascriptInterface</span><br><span class="line">        public void me()&#123;</span><br><span class="line">            Toast.makeText(MainActivity.this, &quot;js call android success&quot;, Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Android调用js代码："><a href="#Android调用js代码：" class="headerlink" title="Android调用js代码："></a>Android调用js代码：</h2><p>//获取到webview对象，然后使用webview对象去调用js中的代码，如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">web.loadUrl(&quot;javascript:androidCallJs()&quot;);</span><br><span class="line">//androidCallJs()方法是js中定义好的方法</span><br></pre></td></tr></table></figure>
+<h2 id="js调用Android代码："><a href="#js调用Android代码：" class="headerlink" title="js调用Android代码："></a>js调用Android代码：</h2><p>//预先把要调用的java对象绑定到js中，后面才能用js来调</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web.addJavascriptInterface(new MyJs(), &quot;jsObj”);//new出来的是对象，后面的jsObj可以理解为这个绑定进去的对象的引用，在js中就是通过这个引用来调用Android的代码</span><br></pre></td></tr></table></figure>
+<p>//在js的代码中进行Android代码调用（注意方法后面的分号别忘了）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;function jsCallAndroid() &#123;&quot; +</span><br><span class="line">                &quot;//这里使用js的window对象，通过addJavascriptInterface绑定Java对象时传递进来的jsObj对象调用me方法&quot; +</span><br><span class="line">                &quot;window.jsObj.me();&quot; +</span><br><span class="line">                &quot;&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>一个简单的js和Android相互调用完成。</p>
 
       
     </div>
@@ -312,7 +312,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/吐槽/" rel="tag">#吐槽</a>
+            <a href="/tags/js/" rel="tag">#js</a>
           
         </div>
       
@@ -321,16 +321,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/30/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/05/17/StickyListHeaders（listview的滑动顶部停靠效果）/" rel="next" title="listview的滑动顶部停靠效果">
+                <i class="fa fa-chevron-left"></i> listview的滑动顶部停靠效果
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/17/StickyListHeaders（listview的滑动顶部停靠效果）/" rel="prev" title="listview的滑动顶部停靠效果">
-                listview的滑动顶部停靠效果 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/17/recyclerView的使用/" rel="prev" title="recyclerView的使用">
+                recyclerView的使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -360,8 +360,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/01/吐槽/"
-           data-title="吐槽" data-url="http://yoursite.com/2016/04/01/吐槽/">
+      <div class="ds-thread" data-thread-key="2016/05/17/js和Android代码相互调用/"
+           data-title="js和Android代码相互调用" data-url="http://yoursite.com/2016/05/17/js和Android代码相互调用/">
       </div>
     
   </div>
@@ -488,7 +488,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android调用js代码："><span class="nav-number">1.</span> <span class="nav-text">Android调用js代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js调用Android代码："><span class="nav-number">2.</span> <span class="nav-text">js调用Android代码：</span></a></li></ol></div>
             
           </div>
         </section>
